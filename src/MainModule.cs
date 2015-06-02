@@ -11,7 +11,7 @@ namespace Nancy.Simple
 				return View ["index", Request.Url];
 			};
 			Post["/sms"] = args => {
-				var twiml = "<Response><Message>Hello World!</Message></Response>";
+				var twiml = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><Response><Message>Hello World!</Message></Response>";
 				return new Response
 				{
 					StatusCode = HttpStatusCode.OK,
