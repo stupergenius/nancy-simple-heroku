@@ -28,6 +28,8 @@ namespace Nancy.Simple
 					response.Message("Download the app at https://play.google.com/store/apps/details?id=com.kidneysmart.kidneysmartrecommendation");
 				} else if (sms.Body.Trim() == "456") {
 					response.Message("Download the app at https://itunes.apple.com/us/app/kidney-smart-recommendation/id900531139?mt=8");
+				} else {
+					response.Message("No comprendé...");
 				}
 
 				var twiml = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>" + response.ToString();
