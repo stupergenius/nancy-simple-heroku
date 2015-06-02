@@ -54,22 +54,22 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="Nancy">
-      <HintPath>..\Nancy.1.2.0\lib\net40\Nancy.dll</HintPath>
+      <HintPath>..\lib\Nancy.1.2.0\lib\net40\Nancy.dll</HintPath>
     </Reference>
     <Reference Include="Nancy.Hosting.Self">
-      <HintPath>..\Nancy.Hosting.Self.1.2.0\lib\net40\Nancy.Hosting.Self.dll</HintPath>
+      <HintPath>..\lib\Nancy.Hosting.Self.1.2.0\lib\net40\Nancy.Hosting.Self.dll</HintPath>
     </Reference>
     <Reference Include="Twilio">
-      <HintPath>..\Twilio.4.0.3\lib\3.5\Twilio.Api.dll</HintPath>
+      <HintPath>..\lib\Twilio.4.0.3\lib\3.5\Twilio.Api.dll</HintPath>
     </Reference>
     <Reference Include="Twilio">
-      <HintPath>..\Twilio.4.0.3\lib\3.5\Twilio.Api.dll</HintPath>
+      <HintPath>..\lib\Twilio.4.0.3\lib\3.5\Twilio.Api.dll</HintPath>
     </Reference>
     <Reference Include="Twilio.Twiml">
-      <HintPath>..\Twilio.TwiML.3.3.6\lib\3.5\Twilio.Twiml.dll</HintPath>
+      <HintPath>..\lib\Twilio.TwiML.3.3.6\lib\3.5\Twilio.Twiml.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp">
-      <HintPath>..\RestSharp.105.0.1\lib\net4\RestSharp.dll</HintPath>
+      <HintPath>..\lib\RestSharp.105.0.1\lib\net4\RestSharp.dll</HintPath>
     </Reference>
 <!--     <Reference Include="Nancy">
       <HintPath>..\lib\Nancy.dll</HintPath>
