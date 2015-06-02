@@ -2,6 +2,8 @@ using System;
 using System.Text;
 using Nancy;
 using Nancy.ModelBinding;
+using Twilio;
+using Twilio.TwiML;
 
 namespace Nancy.Simple
 {
@@ -19,15 +21,16 @@ namespace Nancy.Simple
 			};
 			Post["/sms"] = parameters => {
 				var sms = this.Bind<SMS>();
-				var responseBody = "";
-				
+				new TwilioRestClient("asdf", "asdf");
+				var response = new TwilioResponse();
+
 				if (sms.Body.Trim() == "123") {
-					responseBody = "Download the app at https://play.google.com/store/apps/details?id=com.kidneysmart.kidneysmartrecommendation";
+					response.Message("Download the app at https://play.google.com/store/apps/details?id=com.kidneysmart.kidneysmartrecommendation");
 				} else if (sms.Body.Trim() == "456") {
-					responseBody = "Download the app at https://itunes.apple.com/us/app/kidney-smart-recommendation/id900531139?mt=8";
+					response.Message("Download the app at https://itunes.apple.com/us/app/kidney-smart-recommendation/id900531139?mt=8");
 				}
 
-				var twiml = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><Response>" + responseBody + "</Response>";
+				var twiml = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>" + response.ToString();
 				return new Response
 				{
 					StatusCode = HttpStatusCode.OK,
